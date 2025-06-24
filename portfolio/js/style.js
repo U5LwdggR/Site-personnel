@@ -43,7 +43,34 @@ window.onscroll = function() {
   document.getElementById("up").onclick = function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-</script>
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+    
+    // Pour fermer le menu lorsqu'un lien est cliqué
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+    
+    // Votre code existant pour le bouton up...
+    const upButton = document.getElementById('up');
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            upButton.style.display = 'block';
+        } else {
+            upButton.style.display = 'none';
+        }
+    });
+    
+    upButton.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
+
+
