@@ -504,3 +504,125 @@ border-bottom-right-radius: 10%;
     width: 20%;
     height: 20%;
   }
+/* Styles de base pour le responsive */
+@media (max-width: 1200px) {
+    .carousel {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .image {
+        margin-left: 0 !important;
+        margin-top: 20px;
+    }
+    
+    .reseau_sociaux {
+        margin-top: 30px !important;
+        flex-direction: row !important;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .competence-section {
+        flex-direction: column;
+    }
+    
+    .competence-divider {
+        width: 100% !important;
+        height: 1px !important;
+        margin: 15px 0 !important;
+    }
+    
+    .competence-left, .competence-right {
+        width: 100% !important;
+    }
+    
+    .cont_project {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .project {
+        width: 80% !important;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 0 20px;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #333;
+        padding: 10px 0;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    .hamburger {
+        display: flex !important;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    
+    .principal .text {
+        font-size: 16px !important;
+    }
+    
+    .btn a {
+        font-size: 14px !important;
+        padding: 8px 15px;
+    }
+    
+    form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .principal .text {
+        font-size: 14px !important;
+    }
+    
+    .btn {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .image {
+        width: 250px;
+        height: auto;
+    }
+    
+    .competence-left h2 {
+        font-size: 20px;
+    }
+    
+    .skill-label span:first-child {
+        font-size: 14px;
+    }
+    
+    .project h3 {
+        font-size: 16px;
+    }
+    
+    .project span {
+        padding: 8px 15px !important;
+    }
+}
