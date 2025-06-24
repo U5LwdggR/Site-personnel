@@ -43,3 +43,7 @@ window.onscroll = function() {
   document.getElementById("up").onclick = function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
